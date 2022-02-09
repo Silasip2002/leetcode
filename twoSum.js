@@ -4,7 +4,7 @@
  * @return {number[]}
  */
 
-
+// version one using hash table
  var twoSum = function(nums, target) {
     const dic = new Map();
     let result = [];
