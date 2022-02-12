@@ -10,12 +10,13 @@ const solution = (data) => {
         }
     });
     const res1 = [...zeroArray,...consArray];
-    const res2 =  zeroArray.concat(consArray);
-    console.log(res1, res2);
+    // const res2 =  zeroArray.concat(consArray);
+    console.log(res1);
     // return res;
 }
 
-let input = [0,10,20,0,59,63,0,88,0]
+let input = [1,10,-1,11,5,0,-7,0,25,-35]
+
 solution(input)
 
 //merge two arrays
