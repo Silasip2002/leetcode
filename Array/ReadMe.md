@@ -18,3 +18,8 @@ for i in range(0, sizeOfRow * sizeOfCol) :
     new_x = int(i % c)
     ans[new_y][new_x] = mat[org_y][org_x] 
 ```
+
+## Pointer 
+- set up a pointer variable 
+- use a for loop to check all the value (also called fast pointer)
+- if the the condition is triggered , then move the pointer 
