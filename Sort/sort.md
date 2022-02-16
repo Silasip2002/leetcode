@@ -1,4 +1,4 @@
-# Sort 
+o# Sort 
 
 ## Quick Sort 
 ### theorem
@@ -22,11 +22,34 @@ quickSort(arr[],low,high){
 
 // python 
 
+def partition(arr,low,high):
+    pivot = high
+    pointer = low - 1
 
+    for i in range (low, high):
+        if arr[i] < arr[high]:
+           ( arr[pointer + 1] arr[i]) = ( arr[i] arr[pointer + 1]) 
+            pointer += 1
+        
+    (arr[pointer + 1],arr[high] ) = arr[high],arr[pointer + 1]
+    return pointer + 1
 
+def quickSort(arr:[int],low:int,high:int) -> int:
+    if len(arr) <= 1:
+        return arr
+    
+    if (low < high):
+        pi = partition(arr,low,high)
+        quickSort(arr,low, pi - 1)
+        quickSort(arr,pi +1 , high)
+
+// no return , because we are sorting in the same array
 ```
 ### time complexity
-### space complexity  
+O(n^2) => each time the pivot is greatest or smallest value => each time sub-array  = (n-1) 
+### space complexity
+O(logn)
+
 
 ## Merge sort 
 ### theorem
