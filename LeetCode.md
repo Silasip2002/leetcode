@@ -20,7 +20,7 @@
 ### 入门题目：
 - [v]Leetcode 148. Sort List  
 - [v]Leetcode 56. Merge Intervals
-- Leetcode 27. Remove elements
+- [v]Leetcode 27. Remove elements
 ### 进阶题目：
 - Leetcode 179. Largest Number
 - Leetcode 75. Sort Colors

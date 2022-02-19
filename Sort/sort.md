@@ -56,3 +56,24 @@ O(logn)
 ### code 
 ### time complexity
 ### space complexity  
+
+
+## Bubble sort 
+### theorem
+- loop all the len of arr
+- using two for loop j , each time the len will be decrease by n - i - 1 
+- because each time loop of i which means a biggest value has been sorted,
+### code 
+```
+def bubbleSort(arr):
+    for i in range(len(arr)):
+        for j in range( len(arr) - i - 1): // -i because each time the length will be reduce i , then -1 because the last one value do not need to be sort. 
+            if arr[j+1] < arr[j]:
+                arr[j+1],arr[j] = arr[j],arr[j+1]
+
+return arr
+```
+### time complexity
+ n * [n * 1 * 1] = O(n^2)
+### space complexity  
+O(n)
