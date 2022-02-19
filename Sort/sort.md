@@ -31,7 +31,7 @@ def partition(arr,low,high):
            ( arr[pointer + 1] arr[i]) = ( arr[i] arr[pointer + 1]) 
             pointer += 1
         
-    (arr[pointer + 1],arr[high] ) = arr[high],arr[pointer + 1]
+    (arr[pointer + 1],arr[pivot] ) = arr[pivot],arr[pointer + 1]
     return pointer + 1
 
 def quickSort(arr:[int],low:int,high:int) -> int:
