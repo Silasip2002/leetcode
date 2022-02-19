@@ -53,12 +53,67 @@ const initListNode = (dataArray) => {
  }
 
 
+ var sortList = function(head) {
+    return mergeSort(head);
+};
+
+const mergeSort = (head) => {
+    if (head === null&& head.next ===null){
+        return head;
+    } 
+    
+    let dummy = new ListNode();
+    dummy.next = head;
+    let fast = dummy;
+    let slow = dummy;
+    
+    if (fast != null && fast.next != null){
+        fast = fast.next.next;
+        slow = slow.next.next;
+    }
+    
+    let head2 = new ListNode();
+    head2 = slow.next;
+    slow.next = null;
+    
+    head = mergeSort(head);
+    head2 = mergeSort(head2);
+    
+    return merge(head,head2)
+}
+
+const merge = (head,head2) => {
+    let dummy = new ListNode();
+    let res = dummy.next;
+    
+    if (head.val < head2.val){
+        res.next = head;
+        res = res.next;
+        head = head.next;
+    }else {
+        res.next = head2;
+        res = res.next;
+        head2 = head2.next;
+    }
+    
+    if (head != null){
+        res.next = head;
+    }
+    
+    if(head2 != null){
+        res.next = head2
+    }
+    
+    return res
+}
+
  const main = () => {
     data1 = [4, 3, 2, 1];
     data2 = [3,1,2];
     const l1 = initListNode(data1);
-    const l2 = initListNode(data2);
-    const res = addTwoNumbers(l1,l2);
+    // const l2 = initListNode(data2);
+    // const res = addTwoNumbers(l1,l2);
+    const res = sortList(l1)
     console.log("the result",res);
 }
 
